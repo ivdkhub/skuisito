@@ -268,161 +268,13 @@
     closeCart();
   });
 
-  // 7. Interactive Luxury Reservation System
+  // 7. Reservation Modal System
   const reservationModal = document.getElementById("reservationModal");
   const modalClose = document.getElementById("reservationModalClose");
   const reserveTriggers = document.querySelectorAll(".open-reservation-btn");
   const reservationForm = document.getElementById("reservationForm");
-  const reservationFormView = document.getElementById("reservationFormView");
-  const reservationSuccessView = document.getElementById("reservationSuccessView");
-  const btnCloseSuccessModal = document.getElementById("btnCloseSuccessModal");
-
-  // Elements
-  const resServiceInput = document.getElementById("resService");
-  const resGuestsInput = document.getElementById("resGuests");
-  const resDateInput = document.getElementById("resDate");
-  const resTimeInput = document.getElementById("resTime");
-  const resOccasionInput = document.getElementById("resOccasion");
-  const resClosedWarning = document.getElementById("resClosedWarning");
-  const selectedGuestCount = document.getElementById("selectedGuestCount");
-  const timeSlotsContainer = document.getElementById("timeSlotsContainer");
-  const servicePills = document.querySelectorAll(".service-pill-btn");
-  const guestPills = document.querySelectorAll(".guest-pill-btn");
-  const dateShortcuts = document.querySelectorAll(".quick-date-btn");
-  const occasionChips = document.querySelectorAll(".occasion-chip-btn");
-
-  const lunchSlots = ["12:00", "12:30", "13:00", "13:30", "14:00"];
-  const dinnerSlots = ["18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30", "22:00"];
-
-  // Initialize date input to today
-  function formatDate(d) {
-    const yyyy = d.getFullYear();
-    const mm = String(d.getMonth() + 1).padStart(2, "0");
-    const dd = String(d.getDate()).padStart(2, "0");
-    return `${yyyy}-${mm}-${dd}`;
-  }
-
-  const todayObj = new Date();
-  if (resDateInput) {
-    resDateInput.min = formatDate(todayObj);
-    resDateInput.value = formatDate(todayObj);
-  }
-
-  // Render Time Slots based on Service
-  function renderTimeSlots(service) {
-    if (!timeSlotsContainer) return;
-    const slots = service === "lunch" ? lunchSlots : dinnerSlots;
-    let currentVal = resTimeInput.value;
-    if (!slots.includes(currentVal)) {
-      currentVal = slots[Math.min(2, slots.length - 1)];
-      resTimeInput.value = currentVal;
-    }
-
-    timeSlotsContainer.innerHTML = slots
-      .map(
-        (slot) => `
-        <button type="button" class="time-slot-btn ${slot === currentVal ? "active" : ""}" data-time="${slot}">
-          ${slot}
-        </button>
-      `
-      )
-      .join("");
-
-    timeSlotsContainer.querySelectorAll(".time-slot-btn").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        timeSlotsContainer.querySelectorAll(".time-slot-btn").forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-        resTimeInput.value = btn.getAttribute("data-time");
-      });
-    });
-  }
-
-  // Service Toggle Click Handler
-  servicePills.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      servicePills.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      const service = btn.getAttribute("data-service");
-      resServiceInput.value = service;
-      renderTimeSlots(service);
-    });
-  });
-
-  // Guest Count Pills
-  guestPills.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      guestPills.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      const val = btn.getAttribute("data-guests");
-      resGuestsInput.value = val;
-      if (selectedGuestCount) {
-        selectedGuestCount.textContent = val === "1" ? "1 persona" : `${val} persone`;
-      }
-    });
-  });
-
-  // Quick Date Shortcuts
-  dateShortcuts.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      dateShortcuts.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      const offset = btn.getAttribute("data-date-offset");
-      const targetDate = new Date();
-
-      if (offset === "0") {
-        // Today
-      } else if (offset === "1") {
-        targetDate.setDate(targetDate.getDate() + 1);
-      } else if (offset === "weekend") {
-        // Find next Friday or Saturday
-        const day = targetDate.getDay();
-        const diff = (6 - day + 7) % 7 || 7; // Saturday
-        targetDate.setDate(targetDate.getDate() + diff);
-      }
-
-      if (resDateInput) {
-        resDateInput.value = formatDate(targetDate);
-        checkSundayClosure(targetDate);
-      }
-    });
-  });
-
-  function checkSundayClosure(dateObj) {
-    if (dateObj.getDay() === 0) {
-      resClosedWarning?.classList.remove("d-none");
-    } else {
-      resClosedWarning?.classList.add("d-none");
-    }
-  }
-
-  resDateInput?.addEventListener("change", (e) => {
-    dateShortcuts.forEach((b) => b.classList.remove("active"));
-    const selected = new Date(e.target.value);
-    if (!isNaN(selected.getTime())) {
-      checkSundayClosure(selected);
-    }
-  });
-
-  // Occasion Chips
-  occasionChips.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      if (btn.classList.contains("active")) {
-        btn.classList.remove("active");
-        resOccasionInput.value = "";
-      } else {
-        occasionChips.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-        resOccasionInput.value = btn.getAttribute("data-occasion");
-      }
-    });
-  });
-
-  // Initial render
-  renderTimeSlots("dinner");
 
   function openReservationModal() {
-    reservationFormView?.classList.remove("d-none");
-    reservationSuccessView?.classList.add("d-none");
     reservationModal?.classList.add("open");
   }
 
@@ -438,91 +290,23 @@
   });
 
   modalClose?.addEventListener("click", closeReservationModal);
-  btnCloseSuccessModal?.addEventListener("click", closeReservationModal);
   reservationModal?.addEventListener("click", (e) => {
     if (e.target === reservationModal) {
       closeReservationModal();
     }
   });
 
-  // Handle Form Submission
   reservationForm?.addEventListener("submit", (e) => {
     e.preventDefault();
-    const name = document.getElementById("resName")?.value.trim();
-    const phone = document.getElementById("resPhone")?.value.trim();
-    const guests = resGuestsInput?.value || "2";
-    const date = resDateInput?.value || formatDate(new Date());
-    const time = resTimeInput?.value || "20:00";
-    const service = resServiceInput?.value === "lunch" ? "Pranzo" : "Cena";
-    const occasion = resOccasionInput?.value || "";
-    const notes = document.getElementById("resNotes")?.value.trim() || "";
-
-    if (!name || !phone) {
-      alert("Per favore, inserisci nome e recapito telefonico.");
-      return;
-    }
-
-    // Populate Summary
-    const summaryGuestsEl = document.getElementById("summaryGuests");
-    const summaryDateTimeEl = document.getElementById("summaryDateTime");
-    const summaryNameEl = document.getElementById("summaryName");
-    const summaryOccasionEl = document.getElementById("summaryOccasion");
-    const summaryOccasionRow = document.getElementById("summaryOccasionRow");
-
-    if (summaryGuestsEl) summaryGuestsEl.textContent = `${guests} persone (${service})`;
-    if (summaryDateTimeEl) summaryDateTimeEl.textContent = `${date} ore ${time}`;
-    if (summaryNameEl) summaryNameEl.textContent = `${name} (${phone})`;
-    if (summaryOccasionRow) {
-      if (occasion) {
-        summaryOccasionRow.classList.remove("d-none");
-        if (summaryOccasionEl) summaryOccasionEl.textContent = occasion;
-      } else {
-        summaryOccasionRow.classList.add("d-none");
-      }
-    }
-
-    // Build WhatsApp Confirmation link
-    const btnWhatsApp = document.getElementById("btnWhatsAppConfirm");
-    if (btnWhatsApp) {
-      let waMsg = `Ciao Skuisito SteakHouse! Confermo la mia prenotazione:\n👤 Nome: ${name}\n👥 Ospiti: ${guests} (${service})\n📅 Data: ${date}\n⏰ Ora: ${time}\n📞 Tel: ${phone}`;
-      if (occasion) waMsg += `\n🎉 Occasione: ${occasion}`;
-      if (notes) waMsg += `\n📝 Note: ${notes}`;
-      btnWhatsApp.href = `https://wa.me/390270638397?text=${encodeURIComponent(waMsg)}`;
-    }
-
-    // Build Calendar Event Trigger (.ics download / Google Calendar)
-    const btnCalendar = document.getElementById("btnAddToCalendar");
-    if (btnCalendar) {
-      btnCalendar.onclick = () => {
-        const startIso = `${date.replace(/-/g, "")}T${time.replace(":", "")}00`;
-        const endHour = String(parseInt(time.split(":")[0], 10) + 2).padStart(2, "0");
-        const endIso = `${date.replace(/-/g, "")}T${endHour}${time.split(":")[1]}00`;
-        const googleCalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent("Prenotazione Skuisito SteakHouse")}&dates=${startIso}/${endIso}&details=${encodeURIComponent(`Tavolo riservato per ${guests} persone. Nome: ${name}. Via Pacini 18, Milano`)}&location=${encodeURIComponent("Via Pacini 18, 20131 Milano")}`;
-        window.open(googleCalUrl, "_blank");
-      };
-    }
-
-    // Switch view
-    reservationFormView?.classList.add("d-none");
-    reservationSuccessView?.classList.remove("d-none");
-
-    // Toast feedback
+    const guests = document.getElementById("resGuests")?.value || "2";
+    const date = document.getElementById("resDate")?.value || "Oggi";
+    const time = document.getElementById("resTime")?.value || "19:30";
+    closeReservationModal();
+    reservationForm.reset();
     const toastPattern = window.skuisitoI18n ? window.skuisitoI18n.t("cart.confirmedToast") : "Tavolo confermato per {guests} persone il {date} alle ore {time}!";
     const formattedToast = toastPattern.replace("{guests}", guests).replace("{date}", date).replace("{time}", time);
     showToast(formattedToast);
   });
-
-  // Mobile Sticky Bar Show/Hide on Scroll
-  const mobileStickyBar = document.getElementById("mobileStickyBar");
-  if (mobileStickyBar) {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 220) {
-        mobileStickyBar.classList.add("visible");
-      } else {
-        mobileStickyBar.classList.remove("visible");
-      }
-    });
-  }
 
   // 8. Newsletter Form
   const newsletterForm = document.getElementById("newsletterForm");
