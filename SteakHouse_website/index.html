@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SKUISITO STEAKHOUSE & WINEBAR | Ristorante di Carne e Wine Bar Milano</title>
+  <meta name="description"
+    content="Skuisito SteakHouse & WineBar a Milano: carni argentine e scozzesi, eccellenze DOP, IGT e DOC e la passione dello Chef Gianfranco Riggio.">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/logo.png" type="image/png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="css/aos.css">
+
+  <!-- Mouse Cursor CSS -->
+  <link rel="stylesheet" href="css/mousecursor.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="sisf-cursor sisf-js-cursor">
+    <div class="sisf-cursor-wrapper">
+      <div class="sisf-cursor--follower sisf-js-follower"></div>
+      <div class="sisf-cursor--label sisf-js-label"></div>
+      <div class="sisf-cursor--icon sisf-js-icon"></div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header id="site-header">
+    <a href="#" class="brand-logo" aria-label="Skuisito SteakHouse & WineBar">
+      <img src="images/logo.png" alt="Skuisito SteakHouse & WineBar" class="brand-logo-img">
+    </a>
+
+    <ul class="nav-menu">
+      <li><a href="#" class="nav-link active" data-i18n="nav.home">Home</a></li>
+      <li><a href="#about" class="nav-link" data-i18n="nav.about">Su di Noi</a></li>
+      <li><a href="#menu" class="nav-link" data-i18n="nav.menu">Menù</a></li>
+      <li><a href="#order-online" class="nav-link" data-i18n="nav.takeaway">Asporto</a></li>
+      <li><a href="#testimonials" class="nav-link" data-i18n="nav.reviews">Recensioni</a></li>
+      <li><a href="#events" class="nav-link" data-i18n="nav.events">Eventi</a></li>
+      <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contatti</a></li>
+      <li class="d-md-none mobile-lang-switcher">
+        <div class="lang-flags-group mobile-flags-group">
+          <button class="flag-btn active" data-lang="it" aria-label="Italiano" title="Italiano">
+            <svg class="flag-icon" viewBox="0 0 640 480" width="30" height="20" aria-hidden="true">
+              <g fill-rule="evenodd" stroke-width="1pt">
+                <path fill="#009246" d="M0 0h213.3v480H0z"/>
+                <path fill="#ffffff" d="M213.3 0h213.4v480H213.3z"/>
+                <path fill="#ce2b37" d="M426.7 0H640v480H426.7z"/>
+              </g>
+            </svg>
+          </button>
+          <button class="flag-btn" data-lang="en" aria-label="English" title="English">
+            <svg class="flag-icon" viewBox="0 0 640 480" width="30" height="20" aria-hidden="true">
+              <path fill="#012169" d="M0 0h640v480H0z"/>
+              <path fill="#FFF" d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-179L0 64V0h75z"/>
+              <path fill="#C8102E" d="m424 288 216 162v30h-40L384 318zm120-288 96 71v-71zm-224 81 216 162-40 30-216-162zm-296 296 216-162 40 30-216 162zM0 72l96 72V72zM0 480l216-162v-30L0 450z"/>
+              <path fill="#FFF" d="M240 0h160v480H240zM0 160h640v160H0z"/>
+              <path fill="#C8102E" d="M267 0h107v480H267zM0 187h640v107H0z"/>
+            </svg>
+          </button>
+          <button class="flag-btn" data-lang="es" aria-label="Español" title="Español">
+            <svg class="flag-icon" viewBox="0 0 640 480" width="30" height="20" aria-hidden="true">
+              <path fill="#c60b1e" d="M0 0h640v480H0z"/>
+              <path fill="#ffc400" d="M0 120h640v240H0z"/>
+              <path fill="#c60b1e" d="M120 180a40 40 0 0 0 80 0v-20h-80v20z"/>
+              <circle cx="160" cy="180" r="14" fill="#ffc400"/>
+            </svg>
+          </button>
+        </div>
+      </li>
+    </ul>
+
+    <div class="header-actions">
+      <!-- Flag Language Switcher (IT, EN, ES) -->
+      <div class="lang-flags-group d-none d-md-inline-flex" id="langFlagsGroup">
+        <button class="flag-btn active" data-lang="it" aria-label="Italiano" title="Italiano">
+          <svg class="flag-icon" viewBox="0 0 640 480" width="28" height="19" aria-hidden="true">
+            <g fill-rule="evenodd" stroke-width="1pt">
+              <path fill="#009246" d="M0 0h213.3v480H0z"/>
+              <path fill="#ffffff" d="M213.3 0h213.4v480H213.3z"/>
+              <path fill="#ce2b37" d="M426.7 0H640v480H426.7z"/>
+            </g>
+          </svg>
+        </button>
+        <button class="flag-btn" data-lang="en" aria-label="English" title="English">
+          <svg class="flag-icon" viewBox="0 0 640 480" width="28" height="19" aria-hidden="true">
+            <path fill="#012169" d="M0 0h640v480H0z"/>
+            <path fill="#FFF" d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-179L0 64V0h75z"/>
+            <path fill="#C8102E" d="m424 288 216 162v30h-40L384 318zm120-288 96 71v-71zm-224 81 216 162-40 30-216-162zm-296 296 216-162 40 30-216 162zM0 72l96 72V72zM0 480l216-162v-30L0 450z"/>
+            <path fill="#FFF" d="M240 0h160v480H240zM0 160h640v160H0z"/>
+            <path fill="#C8102E" d="M267 0h107v480H267zM0 187h640v107H0z"/>
+          </svg>
+        </button>
+        <button class="flag-btn" data-lang="es" aria-label="Español" title="Español">
+          <svg class="flag-icon" viewBox="0 0 640 480" width="28" height="19" aria-hidden="true">
+            <path fill="#c60b1e" d="M0 0h640v480H0z"/>
+            <path fill="#ffc400" d="M0 120h640v240H0z"/>
+            <path fill="#c60b1e" d="M120 180a40 40 0 0 0 80 0v-20h-80v20z"/>
+            <circle cx="160" cy="180" r="14" fill="#ffc400"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Cart Trigger -->
+      <button class="cart-btn-trigger" id="cartTrigger" aria-label="Visualizza Carrello" data-i18n-aria="cart.title">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-count">0</span>
+      </button>
+
+      <!-- Reservation Button -->
+      <button class="btn-steak-red open-reservation-btn d-none d-sm-inline-flex">
+        <i class="fa-regular fa-calendar-check"></i> <span data-i18n="nav.bookTable">Prenota un Tavolo</span>
+      </button>
+
+      <!-- Mobile Hamburger -->
+      <button class="mobile-nav-toggle" aria-label="Menu Mobile">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       HERO SECTION: Scroll-Driven Canvas Video Engine
+       ========================================================================= -->
+  <section class="hero-scroll-track" id="heroTrack">
+    <div class="hero-sticky-frame">
+      <!-- High-Performance Canvas Scrubbing 192 Frames -->
+      <canvas id="heroCanvas"></canvas>
+
+      <!-- Vignette and Gradient Overlay -->
+      <div class="hero-vignette"></div>
+
+      <!-- Preloader Pill -->
+      <div class="hero-preloader-pill">
+        <span data-i18n="hero.preloader">Accensione Brace & Carni Pregiate...</span>
+        <div class="preloader-track">
+          <div class="preloader-bar"></div>
+        </div>
+      </div>
+
+      <!-- Text Stages Synchronized with Frame Progression -->
+      <div class="hero-content-layer">
+        <div class="container">
+          <!-- Stage 0: Initial View (Frames 0 - ~35) -->
+          <div class="hero-stage active" id="heroStage0">
+            <div class="hero-tagline" data-i18n="hero.stage0Tagline">SKUISITO STEAKHOUSE & WINEBAR</div>
+            <h1 class="hero-title" data-i18n-html="hero.stage0Title">Incontra, Gusta, Vivi<br>il Vero Sapore</h1>
+            <p class="hero-desc" data-i18n="hero.stage0Desc">
+              Un equilibrio perfetto tra prodotti genuini e innovativi, ricette tradizionali e internazionali, tra mangiare e buon bere, tra sapori e colori.
+            </p>
+            <div class="hero-btn-group">
+              <button class="btn-steak-red open-reservation-btn">
+                <i class="fa-solid fa-utensils"></i> <span data-i18n="hero.stage0BtnBook">Prenota un Tavolo</span>
+              </button>
+              <a href="#menu" class="btn-steak-outline">
+                <i class="fa-solid fa-book-open"></i> <span data-i18n="hero.stage0BtnMenu">Scopri il Menù</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Stage 1: Prime Marbling Seared in Fire (Frames 36 - ~80) -->
+          <div class="hero-stage" id="heroStage1">
+            <div class="hero-tagline" data-i18n="hero.stage1Tagline">Selezione da Pascoli Naturali</div>
+            <h2 class="hero-title" data-i18n="hero.stage1Title">Carni Argentine & Scozzesi</h2>
+            <p class="hero-desc" data-i18n="hero.stage1Desc">
+              Bestiame allevato in ampi pascoli naturali dell'Argentina e della Scozia, dal sapore naturale e unico, cotte alla perfezione per esaltarne ogni sfumatura.
+            </p>
+            <div class="hero-btn-group">
+              <a href="#about" class="btn-steak-outline" data-i18n="hero.stage1Btn">La Nostra Filosofia</a>
+            </div>
+          </div>
+
+          <!-- Stage 2: Landed Sizzling on Artisan Plate (Frames 120 - 191) -->
+          <div class="hero-stage" id="heroStage2">
+            <div class="hero-tagline" data-i18n="hero.stage2Tagline">Esperienza Gusto-Olfattiva</div>
+            <h2 class="hero-title" data-i18n-html="hero.stage2Title">L'Armonia tra<br>Essere e Fare</h2>
+            <p class="hero-desc" data-i18n="hero.stage2Desc">
+              Un'atmosfera serena, piacevole e informale a Milano dove abbandonarsi all'armonia tra il mangiare e l'essere.
+            </p>
+            <div class="hero-btn-group">
+              <button class="btn-steak-red open-reservation-btn" data-i18n="hero.stage2BtnBook">Riserva il Tuo Tavolo</button>
+              <a href="#contact" class="btn-steak-outline" data-i18n="hero.stage2BtnFind">Dove Trovarci</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mouse Scroll Indicator -->
+      <div class="hero-scroll-indicator">
+        <div class="mouse-wheel"></div>
+        <span data-i18n="hero.scrollPrompt">Scorri per Esplorare</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 2: Su di Noi & Filosofia (About Section)
+       ========================================================================= -->
+  <section class="section-welcome" id="about">
+    <div class="welcome-side-label" data-i18n="about.sideLabel">SKUISITO • MILANO PACINI</div>
+    <div class="container">
+      <div class="row align-items-start g-5">
+        <!-- Left Column: Story & Chef Riggio -->
+        <div class="col-lg-6" data-aos="fade-up">
+          <span class="section-label" data-i18n="about.sectionLabel">BENVENUTI DA SKUISITO</span>
+          <h2 class="welcome-heading sis-text-anime-style-3" data-i18n="about.heading">
+            Passione per un Prodotto di Alta Qualità
+          </h2>
+          <p class="welcome-subtext" data-i18n-html="about.text1">
+            Il nostro intento è quello di creare un equilibrio perfetto tra prodotti genuini e innovativi, ricette tradizionali e internazionali, tra mangiare e buon bere, tra sapori e colori. Il rispetto per la materia prima (stagionalità e luogo) e la costante ricerca dei migliori prodotti italiani <strong>DOP, IGT e DOC</strong>, direttamente dai produttori nazionali e internazionali, ci consente di realizzare piatti in grado di soddisfare le richieste e i gusti più differenti.
+          </p>
+          <p class="welcome-subtext" data-i18n-html="about.text2">
+            Oltre alla tradizionale cucina italiana, sono una nostra specialità la <strong>carne argentina e quella scozzese</strong>, dal sapore naturale e unico, fornite dai mercati più esigenti e prodotte da bestiame allevato in ampi pascoli naturali dell'Argentina e della Scozia.
+          </p>
+
+          <!-- Chef Gianfranco Riggio Bio Block -->
+          <div class="chef-quote-box">
+            <span class="chef-badge"><i class="fa-solid fa-utensils"></i> <span data-i18n="about.chefBadge">Lo Chef & Fondatore</span></span>
+            <p class="chef-quote-text" data-i18n="about.chefQuote">
+              "Gianfranco Riggio è lo Chef, cuoco, direttore della società, team leader e portavoce del suo ristorante. Attento fino in fondo ai piccoli dettagli, cerca di amalgamare nel migliore dei modi la tradizione culinaria della sua terra, la Sicilia, volendone conservare i sapori e i profumi, con la modernità e la sperimentazione."
+            </p>
+            <div class="chef-quote-author">
+              <i class="fa-solid fa-circle-check" style="color: var(--primary-red);"></i> <span data-i18n="about.chefAuthor">Gianfranco Riggio — Chef & Direttore</span>
+            </div>
+          </div>
+
+          <a href="#menu" class="more-about-link">
+            <span data-i18n="about.menuLink">Scopri il Nostro Menù</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+
+          <!-- Featured Dish / Steak Image -->
+          <div class="sis-reveal welcome-steak-image mt-3">
+            <img src="images/carne.jpg" alt="Carni Pregiate alla Brace Skuisito" style="border-radius: 8px; max-height: 280px; width: 100%; object-fit: cover;" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Right Column: Chef Photo & 4-Grid Features -->
+        <div class="col-lg-6 position-relative" data-aos="fade-up" data-aos-delay="150">
+          <!-- Chef Gianfranco Riggio Portrait -->
+          <div class="sis-reveal welcome-dining-image">
+            <img src="images/chef.jpg" alt="Chef Gianfranco Riggio" style="object-fit: cover; max-height: 500px; width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.12);" loading="lazy">
+          </div>
+
+          <!-- 4 Feature Highlights Grid -->
+          <div class="features-grid mt-4">
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <div>
+                <h3 class="feature-title" data-i18n="about.f1Title">Prodotti DOP, IGT e DOC</h3>
+                <p class="feature-desc" data-i18n="about.f1Desc">Costante ricerca delle migliori eccellenze agroalimentari italiane e internazionali.</p>
+              </div>
+            </div>
+
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <div>
+                <h3 class="feature-title" data-i18n="about.f2Title">Argentina & Scozia</h3>
+                <p class="feature-desc" data-i18n="about.f2Desc">Carni speciali da bestiame allevato in ampi pascoli naturali incontaminati.</p>
+              </div>
+            </div>
+
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-fire"></i>
+              </div>
+              <div>
+                <h3 class="feature-title" data-i18n="about.f3Title">Tradizione & Innovazione</h3>
+                <p class="feature-desc" data-i18n="about.f3Desc">I sapori e i profumi della Sicilia si fondono con la modernità e la griglia a fuoco vivo.</p>
+              </div>
+            </div>
+
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="500">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-wine-glass-empty"></i>
+              </div>
+              <div>
+                <h3 class="feature-title" data-i18n="about.f4Title">Armonia & Wine Bar</h3>
+                <p class="feature-desc" data-i18n="about.f4Desc">Un'atmosfera informale per serate romantiche, pranzi di lavoro e ritrovi tra amici.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: Esplora il Nostro Menù
+       ========================================================================= -->
+  <section class="section-menu" id="menu">
+    <div class="container">
+      <div class="menu-header">
+        <div>
+          <span class="section-label" data-i18n="menu.sectionLabel">ECCELLENZA CULINARIA</span>
+          <h2 class="menu-section-title sis-text-anime-style-3" data-i18n="menu.sectionTitle">Esplora il Nostro Menù</h2>
+        </div>
+        <div class="menu-nav-controls">
+          <button class="menu-arrow-btn menu-prev" aria-label="Precedente"><i class="fa-solid fa-arrow-left"></i></button>
+          <button class="menu-arrow-btn menu-next" aria-label="Successivo"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Category Filter Sidebar -->
+        <div class="col-lg-3" data-aos="fade-right">
+          <ul class="menu-categories-list">
+            <li><button class="menu-category-btn active" data-category="all" data-i18n="menu.catAll">Tutte le Specialità</button></li>
+            <li><button class="menu-category-btn" data-category="starters" data-i18n="menu.catStarters">Antipasti & Tartare</button></li>
+            <li><button class="menu-category-btn" data-category="primi" data-i18n="menu.catPrimi">Primi Piatti</button></li>
+            <li><button class="menu-category-btn" data-category="steaks" data-i18n="menu.catSteaks">Carni & Brace</button></li>
+            <li><button class="menu-category-btn" data-category="burgers" data-i18n="menu.catBurgers">Hamburger Artigianali</button></li>
+            <li><button class="menu-category-btn" data-category="sides" data-i18n="menu.catSides">Insalate & Contorni</button></li>
+            <li><button class="menu-category-btn" data-category="desserts" data-i18n="menu.catDesserts">Dessert Fatti in Casa</button></li>
+            <li><button class="menu-category-btn" data-category="drinks" data-i18n="menu.catDrinks">Wine Bar & Birre</button></li>
+            <li><button class="menu-category-btn" data-category="events-packages" style="color: var(--primary-red); font-weight: 700;" data-i18n="menu.catEvents">★ Eventi & Feste Private</button></li>
+          </ul>
+        </div>
+
+        <!-- Menu Cards Grid -->
+        <div class="col-lg-9">
+          <div class="row g-4" id="menuItemsGrid">
+
+            <!-- ANTIPASTI & TARTARE -->
+            <!-- Item: Tagliere Salumi & Gnocco Fritto -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="starters" data-aos="fade-up">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/tagliere_salumi_gnocco_fritto.png" alt="Tagliere di salumi con gnocco fritto" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.tagliere.title">Tagliere Salumi & Gnocco Fritto</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.tagliere.desc">Selezione di salumi nostrani serviti con caldo e soffice gnocco fritto della tradizione.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 11,90</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Tartare Mediterranea -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="starters" data-aos="fade-up" data-aos-delay="70">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/tartare_mediterranea.jpg" alt="Tartare Mediterranea di Fassona" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.tartareMed.title">Tartare Mediterranea</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.tartareMed.desc">Fassona piemontese battuta al coltello, pomodori secchi, cipolla e carciofi sott'olio.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 15,00</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Tartare Tradizionale -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="starters" data-aos="fade-up" data-aos-delay="140">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/tartare_tradizionale.jpg" alt="Tartare Tradizionale di Fassona" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.tartareTrad.title">Tartare Tradizionale</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.tartareTrad.desc">Fassona piemontese, capperi, senape, cetriolini, cipolla, tuorlo d'uovo, tabasco e worcester.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 15,00</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Fritto Skuisito -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="starters" data-aos="fade-up" data-aos-delay="210">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/fritto_skuisito.jpg" alt="Fritto Skuisito speciale" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.frittoSkuisito.title">Fritto Skuisito</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.frittoSkuisito.desc">Chicken stick, teezers cheese, onion rings, broccolo cheddar, jalapenos, patate, salsa SK.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 12,90</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Fiori di Zucca Ripieni -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="starters" data-aos="fade-up" data-aos-delay="280">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/abbinamento3.jpg" alt="Fiori di zucca ripieni" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.fioriZucca.title">Fiori di Zucca Ripieni</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.fioriZucca.desc">Fiori di zucca ripieni di crema di patate, pomodorini secchi, pecorino e mentuccia.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 7,50</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Vitel Tonnè al Punto Rosa -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="starters" data-aos="fade-up" data-aos-delay="350">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/vitel_tonne_al_punto_rosa.png" alt="Vitel Tonnè al Punto Rosa" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.vitelTonne.title">Vitel Tonnè al Punto Rosa</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.vitelTonne.desc">Tenero magatello cotto a bassa temperatura con classica crema tonnata e capperi.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 12,00</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PRIMI PIATTI -->
+            <!-- Item: Paccheri di Gragnano -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="primi" data-aos="fade-up">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/paccheri_ragu.webp" alt="Paccheri di Gragnano al ragù di vitello" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.paccheri.title">Paccheri al Ragù di Vitello</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.paccheri.desc">Paccheri di Gragnano con ragù bianco di vitello e scaglie di Pecorino Romano DOP.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 14,00</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Orecchiette Pugliesi -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="primi" data-aos="fade-up" data-aos-delay="70">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/orecchiette_polpettine.webp" alt="Orecchiette Pugliesi con polpettine" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.orecchiette.title">Orecchiette con Polpettine</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.orecchiette.desc">Pasta fresca pugliese con polpettine al sugo tradizionale e ricotta salata siciliana.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 13,00</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Risotto al Rosmarino & Limoni -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="primi" data-aos="fade-up" data-aos-delay="140">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/risotto_limoni_sicilia.jpg" alt="Risotto ai sapori di Sicilia" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.risottoLimoni.title">Risotto Limoni di Sicilia</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.risottoLimoni.desc">Risotto Carnaroli mantecato al rosmarino e profumato ai freschi limoni di Sicilia.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 15,00</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Rigatoni Cacio e Pepe -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="primi" data-aos="fade-up" data-aos-delay="210">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/rigatoni_cacioepepe.webp" alt="Rigatoni Cacio e Pepe" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.rigatoni.title">Rigatoni Cacio e Pepe</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.rigatoni.desc">Crema vellutata di Pecorino Romano DOP e tostatura di pepe nero macinato al momento.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 13,00</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARNI & BRACE -->
+            <!-- Item: Costata Fiorentina -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="steaks" data-aos="fade-up">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/costata_fiorentina.webp" alt="Costata Fiorentina alla brace" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.costataFiorentina.title">Costata Fiorentina alla Brace</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.costataFiorentina.desc">Min. 1 kg con verdure alla griglia, patate steakhouse e salsa chimichurri (prezzo per etto).</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 6,90</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Costata Fassona Piemontese -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="steaks" data-aos="fade-up" data-aos-delay="70">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <video autoplay loop muted playsinline poster="images/piatto (5).jpg" class="menu-card-media" style="width: 100%; height: 100%; object-fit: cover;">
+                    <source src="images/costata_fassona_500g.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.costataFassona.title">Costata Fassona (500g)</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.costataFassona.desc">Pregiata carne piemontese cotta alla brace a fuoco vivo con patate steakhouse.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 34,90</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Tagliata di Scottona -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="steaks" data-aos="fade-up" data-aos-delay="140">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/tagliata_scottona_200g.jpg" alt="Tagliata di Scottona" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.tagliataScottona.title">Tagliata di Scottona (200g)</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.tagliataScottona.desc">Con fonduta al Grana Padano, gocce di rucola, pomodorino confit e purea di patate.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 23,90</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Ribeye Scozzese senz'osso -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="steaks" data-aos="fade-up" data-aos-delay="210">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/ribeye_scozzese_320g.jpg" alt="Ribeye Scozzese senz'osso" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.ribeyeScozzese.title">Ribeye Scozzese (320g)</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.ribeyeScozzese.desc">Costata scozzese senz'osso da pascoli naturali, tenera e gustosa, con patate steakhouse.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 27,90</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Controfiletto Argentino -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="steaks" data-aos="fade-up" data-aos-delay="280">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/piatto (5).jpg" alt="Controfiletto Argentino" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.controfiletto.title">Controfiletto Argentino (300g)</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.controfiletto.desc">Carne argentina selezionata da pascoli naturali, cotta a puntino con patate steakhouse.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 26,50</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Filetto al Grana Padano -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="steaks" data-aos="fade-up" data-aos-delay="350">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/piatto (5).jpg" alt="Filetto al Grana Padano" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.filettoGrana.title">Filetto al Grana Padano (230g)</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.filettoGrana.desc">Tenero filetto di manzo con vellutata calda al Grana Padano e morbida purea di patate.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 33,50</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Cotoletta di Vitello alla Milanese -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="steaks" data-aos="fade-up">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/cotoletta_milanese.webp" alt="Cotoletta di Vitello alla Milanese" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.cotoletta.title">Cotoletta alla Milanese</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.cotoletta.desc">Cotoletta di vitello dorata e croccante secondo tradizione milanese con patate steakhouse.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 24,90</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Ribs in Salsa BBQ -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="steaks" data-aos="fade-up" data-aos-delay="70">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <video autoplay loop muted playsinline poster="images/ribs_bbq.jpg" class="menu-card-media" style="width: 100%; height: 100%; object-fit: cover;">
+                    <source src="images/ribs_salsa_bbq.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.ribs.title">Ribs in Salsa BBQ</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.ribs.desc">Costine di maiale glassate con salsa BBQ e servite con patate dorate steakhouse.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 20,90</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- HAMBURGER ARTIGIANALI -->
+            <!-- Item: Bacon Cheese Hamburger -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="burgers" data-aos="fade-up">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/bacon_cheese_hamburger.jpg" alt="Bacon Cheese Hamburger" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.burgerBacon.title">Bacon Cheese Hamburger</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.burgerBacon.desc">Manzo 200g, bacon croccante, formaggio cheese, jalapenos, insalata, salsa SK, patate.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 16,50</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Toro Seduto Hamburger -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="burgers" data-aos="fade-up" data-aos-delay="70">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/burger_toro_seduto.jpg" alt="Toro Seduto Hamburger" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.burgerToro.title">Toro Seduto (300g)</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.burgerToro.desc">Manzo 300g ripieno di formaggio, bacon, cipolla caramellata, salsa tartara e patate.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 19,90</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Mister Hamburger -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="burgers" data-aos="fade-up" data-aos-delay="140">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/mister_hamburger_classico.jpg" alt="Mister Hamburger classico" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.burgerMister.title">Mister Hamburger Classico</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.burgerMister.desc">Manzo 200g, ketchup artigianale, cetriolini in salamoia e patate steakhouse.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 15,70</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- INSALATE & CONTORNI -->
+            <!-- Item: Caesar Salad di Pollo -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="sides" data-aos="fade-up">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/insalata_caesar.jpg" alt="Caesar Salad di Pollo" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.caesarSalad.title">Caesar Salad di Pollo</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.caesarSalad.desc">Insalata mista, pollo grigliato, pomodorini, olive, crostini, formaggio grana e salsa Caesar.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 14,00</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Insalata Greca -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="sides" data-aos="fade-up" data-aos-delay="70">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/piatto (4).jpg" alt="Insalata Greca" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.insalataGreca.title">Insalata Greca</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.insalataGreca.desc">Pomodoro, formaggio feta, cetrioli, peperoni, acciughe, olive greche e cipolla.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 12,00</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Patate Steak House con Tartara -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="sides" data-aos="fade-up" data-aos-delay="140">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/abbinamento1.jpg" alt="Patate Steak House con Salsa Tartara" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.patateSteak.title">Patate Steak House & Tartara</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.patateSteak.desc">Spicchi di patate dorate e croccanti serviti con gustosa salsa tartara artigianale.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 6,50</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DESSERT FATTI IN CASA -->
+            <!-- Item: Cannolo Siciliano -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="desserts" data-aos="fade-up">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/cannolo_siciliano.jpg" alt="Cannolo Siciliano Tradizionale" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.cannolo.title">Cannolo Siciliano</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.cannolo.desc">Cialda croccante con pura ricotta siciliana, granella di pistacchio e scaglie di cioccolato.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 6,00</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Tortino al Cioccolato -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="desserts" data-aos="fade-up" data-aos-delay="70">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/tortino_cioccolato_fondente.jpg" alt="Tortino al Cioccolato Fondente" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.tortino.title">Tortino al Cioccolato Fondente</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.tortino.desc">Cuore caldo morbido al cioccolato fondente accompagnato da quenelle di gelato alla crema.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 7,00</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Tiramisù della Casa -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="desserts" data-aos="fade-up" data-aos-delay="140">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/tiramisu_della_casa.jpg" alt="Tiramisù della Casa" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.tiramisu.title">Tiramisù della Casa</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.tiramisu.desc">Autentico tiramisù artigianale fatto in casa con crema al mascarpone e caffè espresso.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 7,00</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- WINE BAR & BIRRE -->
+            <!-- Item: Nero D'Avola Skuisito -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="drinks" data-aos="fade-up">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/vino_nerodavola.webp" alt="Nero D'Avola D.O.C. Skuisito" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.vinoNeroDavola.title">Nero D'Avola D.O.C. Skuisito</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.vinoNeroDavola.desc">Il vino della casa firmato Skuisito: rosso intenso, armonico, ideale in abbinamento alle carni.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 22,00</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Selezione Wine List -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="drinks" data-aos="fade-up" data-aos-delay="70">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/vino (2).jpg" alt="Selezione Wine List D.O.C." loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.vinoSelection.title">Selezione Wine List D.O.C.</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.vinoSelection.desc">Ampia carta di etichette selezionate italiane e internazionali (-20% su asporto).</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 18,00</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item: Birra Hacker-Pschorr -->
+            <div class="col-md-6 col-xl-4 menu-card-col" data-category="drinks" data-aos="fade-up" data-aos-delay="140">
+              <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                  <img src="images/birra_spina.jpg" alt="Birra alla spina Hacker-Pschorr" loading="lazy">
+                </div>
+                <div class="menu-card-body">
+                  <h3 class="menu-card-title" data-i18n="menu.items.birraSpina.title">Birra Spina Hacker-Pschorr (40cl)</h3>
+                  <p class="menu-card-desc" data-i18n="menu.items.birraSpina.desc">Lager bavarese 5,8° dorata e profumata, spillata fresca al banco.</p>
+                  <div class="menu-card-footer">
+                    <span class="menu-card-price">€ 6,00</span>
+                    <button class="menu-add-btn" aria-label="Aggiungi all'ordine"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- =====================================================================
+           EVENTI & FESTE PRIVATE: Proposte Menù a Persona
+           ===================================================================== -->
+      <div class="menu-events-highlight" id="eventi-privati-menu">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="section-label" data-i18n="eventsPackages.sectionLabel">OCCASIONI SPECIALI & GRUPPI</span>
+          <h2 class="menu-section-title sis-text-anime-style-3 mb-2" style="font-size: 2.5rem;" data-i18n="eventsPackages.sectionTitle">Eventi e Feste Private</h2>
+          <p class="text-muted mx-auto" style="max-width: 680px; font-size: 0.95rem;" data-i18n="eventsPackages.subtitle">
+            Proposte di menù complete a prezzo fisso per persona per festeggiare lauree, cene aziendali, compleanni ed eventi speciali da Skuisito SteakHouse & WineBar.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Pacchetto 1: Menu Gruppi min. 8 pax -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="event-package-card">
+              <span class="package-top-badge" data-i18n="eventsPackages.p1Badge">Min. 8 Pax</span>
+              <div class="package-icon-circle">
+                <i class="fa-solid fa-champagne-glasses"></i>
+              </div>
+              <h3 class="package-title" data-i18n="eventsPackages.p1Title">Menù Gruppi</h3>
+              <div class="package-content">
+                <span class="package-section-tag" data-i18n="eventsPackages.p1Tag1">Antipasti da condividere</span>
+                <ul class="package-course-list">
+                  <li data-i18n="eventsPackages.p1Item1">Bruschette al pomodoro fresco e basilico</li>
+                  <li data-i18n="eventsPackages.p1Item2">Macco di fave con cicoria ripassata con olio, aglio e peperoncino</li>
+                  <li data-i18n="eventsPackages.p1Item3">Polpette al sugo della tradizione</li>
+                </ul>
+
+                <span class="package-section-tag" data-i18n="eventsPackages.p1Tag2">Primo Piatto</span>
+                <ul class="package-course-list">
+                  <li data-i18n="eventsPackages.p1Item4">Risotto ai funghi porcini profumato</li>
+                </ul>
+
+                <span class="package-section-tag" data-i18n="eventsPackages.p1Tag3">Dessert</span>
+                <ul class="package-course-list">
+                  <li data-i18n="eventsPackages.p1Item5">Dessert artigianale della casa</li>
+                </ul>
+
+                <div class="mt-3 pt-2 text-muted" style="font-size: 0.82rem;">
+                  <i class="fa-solid fa-check text-danger me-1"></i> <span data-i18n="eventsPackages.p1Note">Include coperto, acqua minerale e pane</span>
+                </div>
+              </div>
+
+              <div class="package-price-box">
+                <div class="package-main-price"><span data-i18n="eventsPackages.p1Price">€ 30,-</span> <span style="font-size: 0.85rem; font-weight: normal; color: #666;" data-i18n="eventsPackages.p1PerPerson">/ persona</span></div>
+                <div class="package-sub-price" data-i18n-html="eventsPackages.p1SubPrice">
+                  <strong>€ 35,- / persona</strong> con <strong>vino incluso</strong> proposto dalla casa (1 bt. ogni 4 pax)
+                </div>
+              </div>
+
+              <button class="btn-steak-red w-100 open-reservation-btn" data-i18n="eventsPackages.p1Btn">Prenota Menù Gruppi</button>
+            </div>
+          </div>
+
+          <!-- Pacchetto 2: Feste di Laurea (Pranzo di Laurea) -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="event-package-card featured">
+              <span class="package-top-badge" data-i18n="eventsPackages.p2Badge">Formula All In</span>
+              <div class="package-icon-circle">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <h3 class="package-title" data-i18n="eventsPackages.p2Title">Feste di Laurea</h3>
+              <div class="package-content">
+                <p style="font-size: 0.88rem; color: #636875; margin-bottom: 0.8rem;" data-i18n-html="eventsPackages.p2Desc">
+                  Per i <strong>Pranzi di Laurea</strong> proponiamo una speciale formula con piatti a scelta libera dal menù del giorno.
+                </p>
+
+                <span class="package-section-tag" data-i18n="eventsPackages.p2Tag1">Scelta Portate</span>
+                <ul class="package-course-list">
+                  <li data-i18n-html="eventsPackages.p2Item1"><strong>1 Primo Piatto</strong> a scelta libera dal menù del pranzo</li>
+                  <li data-i18n-html="eventsPackages.p2Item2"><strong>1 Secondo Piatto</strong> a scelta libera dal menù del pranzo</li>
+                </ul>
+
+                <span class="package-section-tag" data-i18n="eventsPackages.p2Tag2">Inclusioni</span>
+                <ul class="package-course-list">
+                  <li data-i18n="eventsPackages.p2Item3">Coperto, acqua minerale e pane fresco</li>
+                </ul>
+
+                <div class="mt-3 pt-2 text-muted" style="font-size: 0.82rem;">
+                  <i class="fa-solid fa-graduation-cap text-danger me-1"></i> <span data-i18n="eventsPackages.p2Note">Atmosfera ideale per festeggiare con amici e colleghi</span>
+                </div>
+              </div>
+
+              <div class="package-price-box">
+                <div class="package-main-price"><span data-i18n="eventsPackages.p2Price">€ 25,-</span> <span style="font-size: 0.85rem; font-weight: normal; color: #666;" data-i18n="eventsPackages.p2PerPerson">/ persona</span></div>
+                <div class="package-sub-price" data-i18n-html="eventsPackages.p2SubPrice">
+                  <strong>€ 30,- / persona</strong> con <strong>vino incluso</strong> proposto dalla casa (1 bt. 0.75cl ogni 4 pax)
+                </div>
+              </div>
+
+              <button class="btn-steak-red w-100 open-reservation-btn" data-i18n="eventsPackages.p2Btn">Prenota Pranzo Laurea</button>
+            </div>
+          </div>
+
+          <!-- Pacchetto 3: Eventi Privati & Cene Aziendali -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="event-package-card">
+              <span class="package-top-badge" data-i18n="eventsPackages.p3Badge">Premium All-Inclusive</span>
+              <div class="package-icon-circle">
+                <i class="fa-solid fa-cake-candles"></i>
+              </div>
+              <h3 class="package-title" data-i18n="eventsPackages.p3Title">Eventi Privati & Aziendali</h3>
+              <div class="package-content">
+                <span class="package-section-tag" data-i18n="eventsPackages.p3Tag1">Aperitivo di Benvenuto</span>
+                <ul class="package-course-list">
+                  <li data-i18n="eventsPackages.p3Item1">Calice di bollicine di Valdobbiadene</li>
+                </ul>
+
+                <span class="package-section-tag" data-i18n="eventsPackages.p3Tag2">Antipasti</span>
+                <ul class="package-course-list">
+                  <li data-i18n="eventsPackages.p3Item2">Vitel Tonnè al punto rosa</li>
+                  <li data-i18n="eventsPackages.p3Item3">Flan di Zucca Mantovana</li>
+                </ul>
+
+                <span class="package-section-tag" data-i18n="eventsPackages.p3Tag3">Primo & Secondo</span>
+                <ul class="package-course-list">
+                  <li data-i18n="eventsPackages.p3Item4">Risotto ai funghi Porcini</li>
+                  <li data-i18n="eventsPackages.p3Item5">Tagliata di Angus Argentino con patate al forno e verdurine croccanti</li>
+                </ul>
+
+                <span class="package-section-tag" data-i18n="eventsPackages.p3Tag4">Dessert & Bevande</span>
+                <ul class="package-course-list">
+                  <li data-i18n="eventsPackages.p3Item6">Dessert della casa</li>
+                  <li data-i18n="eventsPackages.p3Item7">Vino Sommelier (1 bt. ogni 3 pax a scelta tra bianco / rosso / rosé)</li>
+                  <li data-i18n="eventsPackages.p3Item8">Acqua minerale e Caffè inclusi</li>
+                </ul>
+              </div>
+
+              <div class="package-price-box">
+                <div class="package-main-price"><span data-i18n="eventsPackages.p3Price">€ 50,-</span> <span style="font-size: 0.85rem; font-weight: normal; color: #666;" data-i18n="eventsPackages.p3PerPerson">/ persona</span></div>
+                <div class="package-sub-price text-success fw-semibold" data-i18n="eventsPackages.p3SubPrice">
+                  Pacchetto completo All-Inclusive
+                </div>
+              </div>
+
+              <button class="btn-steak-red w-100 open-reservation-btn" data-i18n="eventsPackages.p3Btn">Richiedi per Evento</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: Come Ordinare da Asporto (Process & Appetite Cards)
+       ========================================================================= -->
+  <section class="section-order-online" id="order-online">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-label text-white-50" data-i18n="takeaway.sectionLabel">SEMPLICE & DIRETTO</span>
+        <h2 class="order-online-heading sis-text-anime-style-3" data-i18n="takeaway.heading">Come Ordinare da Asporto</h2>
+      </div>
+
+      <!-- 4 Steps with Directional Flow -->
+      <div class="order-steps-grid">
+        <div class="order-step-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="order-step-icon-wrap">
+            <i class="fa-solid fa-cart-plus"></i>
+          </div>
+          <span class="order-step-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+          <h3 class="order-step-title" data-i18n="takeaway.step1Title">1. Scegli i Tuoi Piatti</h3>
+          <p class="order-step-desc" data-i18n="takeaway.step1Desc">Esplora le nostre carni alla brace, gli antipasti e le bottiglie selezionate dal wine bar.</p>
+        </div>
+
+        <div class="order-step-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="order-step-icon-wrap">
+            <i class="fa-solid fa-credit-card"></i>
+          </div>
+          <span class="order-step-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+          <h3 class="order-step-title" data-i18n="takeaway.step2Title">2. Conferma l'Ordine</h3>
+          <p class="order-step-desc" data-i18n="takeaway.step2Desc">Seleziona l'orario di ritiro desiderato e inserisci i tuoi recapiti per la conferma.</p>
+        </div>
+
+        <div class="order-step-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="order-step-icon-wrap">
+            <i class="fa-solid fa-fire-burner"></i>
+          </div>
+          <span class="order-step-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+          <h3 class="order-step-title" data-i18n="takeaway.step3Title">3. Preparazione Espressa</h3>
+          <p class="order-step-desc" data-i18n="takeaway.step3Desc">La nostra cucina prepara i tagli alla griglia con la massima cura per preservarne la morbidezza.</p>
+        </div>
+
+        <div class="order-step-item" data-aos="fade-up" data-aos-delay="400">
+          <div class="order-step-icon-wrap">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <h3 class="order-step-title" data-i18n="takeaway.step4Title">4. Gusta la Qualità</h3>
+          <p class="order-step-desc" data-i18n="takeaway.step4Desc">Assapora l'esperienza Skuisito SteakHouse comodamente con la tua famiglia e i tuoi ospiti.</p>
+        </div>
+      </div>
+
+      <!-- Appetizer Platter and Skewers Showcase Matching Mockup -->
+      <div class="order-appetizer-mosaic" data-aos="fade-up" data-aos-delay="250">
+        <div class="order-mosaic-card sis-reveal">
+          <img src="images/abbinamento1.jpg" alt="Abbinamento Carne e Vini" loading="lazy">
+        </div>
+        <div class="order-mosaic-card sis-reveal">
+          <img src="images/abbinamento3.jpg" alt="Degustazione Skuisito" loading="lazy">
+        </div>
+        <div class="d-flex flex-column justify-content-center px-3">
+          <h4 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 0.75rem;" data-i18n="takeaway.boxTitle">Desideri Gustare le Nostre Carni?</h4>
+          <p style="color: rgba(255,255,255,0.75); font-size: 0.95rem; margin-bottom: 1.5rem;" data-i18n="takeaway.boxDesc">
+            Ordina per l'asporto oppure riserva un tavolo per vivere l'esperienza completa della nostra steakhouse & wine bar a Milano.
+          </p>
+          <div class="d-flex gap-2 flex-wrap">
+            <button class="btn-steak-red open-reservation-btn" data-i18n="takeaway.btnBook">Prenota un Tavolo</button>
+            <a href="#menu" class="btn-steak-outline" data-i18n="takeaway.btnMenu">Sfoglia il Menù</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 5: Esperienze dei Clienti (Testimonials)
+       ========================================================================= -->
+  <section class="section-testimonials" id="testimonials">
+    <div class="container position-relative">
+      <div class="row align-items-center g-5">
+        <!-- Left Column: Official Reviews Photo -->
+        <div class="col-lg-5" data-aos="fade-right">
+          <div class="testimonials-photo-wrap sis-reveal">
+            <img src="images/recensioni.jpg" alt="Recensioni ed Esperienze Skuisito SteakHouse" class="testimonials-img" loading="lazy">
+            <div class="testimonials-badge-float">
+              <div class="badge-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="badge-text"><strong data-i18n="testimonials.badgeScore">4.9 / 5</strong> <span data-i18n="testimonials.badgeRating">Valutazione Clienti</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Heading, Navigation & Testimonials Slider -->
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <div>
+              <span class="section-label" data-i18n="testimonials.sectionLabel">L'ESPERIENZA DEI NOSTRI OSPITI</span>
+              <h2 class="testimonial-heading sis-text-anime-style-3 mb-0" data-i18n="testimonials.heading">Recensioni & Esperienze</h2>
+            </div>
+            <div class="menu-nav-controls">
+              <button class="menu-arrow-btn testimonial-prev" aria-label="Recensione Precedente"><i class="fa-solid fa-arrow-left"></i></button>
+              <button class="menu-arrow-btn testimonial-next" aria-label="Recensione Successiva"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <!-- Swiper Slider -->
+          <div class="swiper testimonials-swiper">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="testimonial-quote">
+                    "<span class="testimonial-quote-text">Carne eccezionale con una cottura alla brace impeccabile e una selezione di vini davvero ricercata. Il servizio è caloroso, attento e l'ambiente elegante.</span>"
+                  </p>
+                  <div class="testimonial-author">
+                    <span data-i18n="testimonials.guestRole">Ospite Skuisito SteakHouse</span>
+                    <span class="tripadvisor-badge"><i class="fa-solid fa-circle-check"></i> <span data-i18n="testimonials.badge">Recensione Verificata</span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="testimonial-quote">
+                    "<span class="testimonial-quote-text">La migliore tagliata e cotoletta di Milano! L'attenzione dello Chef Gianfranco Riggio per le materie prime fa davvero la differenza.</span>"
+                  </p>
+                  <div class="testimonial-author">
+                    <span data-i18n="testimonials.guestRole">Ospite Skuisito SteakHouse</span>
+                    <span class="tripadvisor-badge"><i class="fa-solid fa-circle-check"></i> <span data-i18n="testimonials.badge">Recensione Verificata</span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="testimonial-quote">
+                    "<span class="testimonial-quote-text">Abbiamo organizzato qui una festa di laurea: menù perfetto, porzioni generose e grande disponibilità di tutto lo staff. Consigliatissimo!</span>"
+                  </p>
+                  <div class="testimonial-author">
+                    <span data-i18n="testimonials.guestRole">Ospite Skuisito SteakHouse</span>
+                    <span class="tripadvisor-badge"><i class="fa-solid fa-circle-check"></i> <span data-i18n="testimonials.badge">Recensione Verificata</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Decorative Black Peppercorns Accent -->
+      <svg class="peppercorns-accent" viewBox="0 0 100 100" fill="#222">
+        <circle cx="20" cy="30" r="4" />
+        <circle cx="35" cy="22" r="3.5" />
+        <circle cx="50" cy="38" r="5" />
+        <circle cx="65" cy="25" r="4" />
+        <circle cx="42" cy="52" r="3" />
+        <circle cx="60" cy="58" r="4.5" />
+        <circle cx="78" cy="45" r="3.5" />
+        <circle cx="85" cy="65" r="4" />
+        <circle cx="70" cy="78" r="4" />
+        <circle cx="50" cy="72" r="3" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6: Eventi, Degustazioni & Newsletter
+       ========================================================================= -->
+  <section class="section-events" id="events">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="events-header text-center mx-auto" data-aos="fade-up">
+        <span class="section-label" data-i18n="events.sectionLabel">SERATE A TEMA & DEGUSTAZIONI</span>
+        <h2 class="events-title sis-text-anime-style-3" data-i18n="events.heading">I Nostri Eventi & Atmosfera</h2>
+        <p class="events-subtitle mx-auto" data-i18n="events.subtitle">
+          Dalle serate con degustazione di vini e carni pregiate agli eventi privati e momenti speciali: scopri l'esperienza autentica e conviviale di Skuisito SteakHouse & WineBar a Milano.
+        </p>
+      </div>
+
+      <!-- Video Showcase & Highlight Row -->
+      <div class="row g-4 align-items-center mb-5">
+        <div class="col-lg-7" data-aos="fade-right">
+          <div class="event-video-wrapper">
+            <video controls playsinline preload="metadata" poster="images/evento1.jpg" class="event-video-player">
+              <source src="images/1.mp4" type="video/mp4">
+              Il tuo browser non supporta la riproduzione video HTML5.
+            </video>
+          </div>
+        </div>
+        <div class="col-lg-5" data-aos="fade-left">
+          <div class="ps-lg-3">
+            <span class="badge bg-danger mb-2 px-3 py-2 text-uppercase fw-semibold" style="letter-spacing: 1px; font-size: 0.75rem;" data-i18n="events.exclusiveBadge">Esperienze Esclusive</span>
+            <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 1rem; color: #17181c;" data-i18n="events.cardTitle">Degustazioni di Carne & Wine Pairing</h3>
+            <p style="color: #636875; line-height: 1.7; margin-bottom: 1.5rem;" data-i18n="events.cardDesc">
+              Periodicamente organizziamo percorsi guidati di degustazione per esplorare le migliori selezioni di carne e le etichette più prestigiose della nostra cantina, in un clima caldo e accogliente.
+            </p>
+            <ul style="list-style: none; padding-left: 0; color: #495057; font-size: 0.95rem; line-height: 2;">
+              <li><i class="fa-solid fa-circle-check text-danger me-2"></i> <span data-i18n="events.bullet1">Serate frollatura & tagli dal mondo</span></li>
+              <li><i class="fa-solid fa-circle-check text-danger me-2"></i> <span data-i18n="events.bullet2">Percorsi enogastronomici con sommelier</span></li>
+              <li><i class="fa-solid fa-circle-check text-danger me-2"></i> <span data-i18n="events.bullet3">Eventi privati e cene aziendali su misura</span></li>
+            </ul>
+            <div class="mt-4">
+              <button class="btn-steak-red open-reservation-btn" data-i18n="events.btnBook">Prenota per un Evento</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real Event & Atmosphere Photo Mosaic -->
+      <div class="gallery-grid-top">
+        <div class="gallery-item sis-reveal" data-aos="fade-up">
+          <img src="images/evento1.jpg" alt="Serata degustazione Skuisito SteakHouse" loading="lazy">
+          <div class="gallery-overlay"><i class="fa-solid fa-wine-glass"></i></div>
+        </div>
+        <div class="gallery-item sis-reveal" data-aos="fade-up" data-aos-delay="70">
+          <img src="images/evento2.jpg" alt="Brindisi e atmosfera Skuisito" loading="lazy">
+          <div class="gallery-overlay"><i class="fa-solid fa-champagne-glasses"></i></div>
+        </div>
+        <div class="gallery-item sis-reveal" data-aos="fade-up" data-aos-delay="140">
+          <img src="images/evento3.jpg" alt="Selezione vini ed etichette wine bar" loading="lazy">
+          <div class="gallery-overlay"><i class="fa-solid fa-bottle-droplet"></i></div>
+        </div>
+        <div class="gallery-item sis-reveal" data-aos="fade-up" data-aos-delay="210">
+          <img src="images/locale (2).jpg" alt="Sala ristorante e tavoli accoglienti" loading="lazy">
+          <div class="gallery-overlay"><i class="fa-solid fa-utensils"></i></div>
+        </div>
+        <div class="gallery-item sis-reveal" data-aos="fade-up" data-aos-delay="280">
+          <img src="images/aperitivo.jpg" alt="Aperitivo e calici d'autore" loading="lazy">
+          <div class="gallery-overlay"><i class="fa-solid fa-martini-glass-citron"></i></div>
+        </div>
+      </div>
+
+      <!-- Bottom Grid (Photos + Newsletter Card) -->
+      <div class="gallery-grid-bottom">
+        <div class="gallery-item sis-reveal" data-aos="fade-up">
+          <img src="images/locale.jpg" alt="Atmosfera e dettagli locale Skuisito" loading="lazy">
+          <div class="gallery-overlay"><i class="fa-solid fa-camera"></i></div>
+        </div>
+        <div class="gallery-item sis-reveal" data-aos="fade-up" data-aos-delay="70">
+          <img src="images/evento.jpg" alt="Eventi speciali Skuisito SteakHouse" loading="lazy">
+          <div class="gallery-overlay"><i class="fa-solid fa-sparkles"></i></div>
+        </div>
+        <div class="gallery-item sis-reveal" data-aos="fade-up" data-aos-delay="140">
+          <img src="images/piatto (3).jpg" alt="Tagliere e specialità della serata" loading="lazy">
+          <div class="gallery-overlay"><i class="fa-solid fa-fire-burner"></i></div>
+        </div>
+
+        <!-- Newsletter Subscription Box -->
+        <div class="newsletter-card" data-aos="fade-up" data-aos-delay="210">
+          <h3 class="newsletter-title" data-i18n="events.newsletterTitle">Resta aggiornato su serate a tema, degustazioni ed eventi speciali</h3>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" class="newsletter-input" placeholder="Inserisci la tua email" data-i18n-placeholder="events.newsletterPlaceholder" required>
+            <button type="submit" class="newsletter-submit-btn" aria-label="Iscriviti">
+              <i class="fa-solid fa-envelope"></i>
+            </button>
+          </form>
+          <!-- Subtle Rosemary Garnish SVG -->
+          <svg
+            style="position: absolute; right: -10px; bottom: -10px; width: 80px; opacity: 0.15; pointer-events: none;"
+            viewBox="0 0 100 100" fill="#2b8a3e">
+            <path d="M10 90 Q 50 50 90 10 Q 70 40 40 70 Z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 7: Posizione, Orari & Mappa (Contact Section)
+       ========================================================================= -->
+  <section class="section-contact" id="contact">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <!-- Contact Details -->
+        <div class="col-lg-5" data-aos="fade-right">
+          <span class="section-label" data-i18n="contact.sectionLabel">VIENI A TROVARCI A MILANO</span>
+          <h2 class="sis-text-anime-style-3 mb-4" style="font-size: 2.8rem;" data-i18n="contact.heading">Posizione & Contatti</h2>
+
+          <div class="contact-info-block">
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-item-content">
+                <h5 data-i18n="contact.phoneTitle">Prenotazioni Telefoniche</h5>
+                <p><a href="tel:+390270638397">+39 02 70638397</a></p>
+                <small class="text-muted" data-i18n="contact.phoneReferent">Referente: Gianfranco Riggio</small>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-item-content">
+                <h5 data-i18n="contact.emailTitle">Email & Richieste</h5>
+                <p><a href="mailto:info@skuisito.it">info@skuisito.it</a></p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-item-content">
+                <h5 data-i18n="contact.addressTitle">Via Pacini 18, 20131 Milano</h5>
+                <a href="https://maps.google.com/?q=Via+Pacini+18+20131+Milano" target="_blank" rel="noopener" class="direction-link"><span data-i18n="contact.mapsLink">Apri su Google Maps</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fa-solid fa-clock"></i></div>
+              <div class="contact-item-content">
+                <h5 data-i18n="contact.hoursTitle">Orari di Apertura</h5>
+                <p style="margin-bottom: 0.25rem;" data-i18n-html="contact.hoursMonFri"><strong>Lun - Ven:</strong> 12:00 - 14:30 | 18:00 - 23:00</p>
+                <p style="margin-bottom: 0.25rem;" data-i18n-html="contact.hoursSat"><strong>Sabato:</strong> 12:00 - 15:00 | 18:00 - 24:00</p>
+                <p style="color: #c92a2a; font-weight: 600; margin-bottom: 0;" data-i18n="contact.hoursSun">Domenica Chiuso</p>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links-row">
+              <a href="https://www.instagram.com/skuisito/?hl=it" target="_blank" rel="noopener" class="social-link-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.tiktok.com/@skuisitosteakhousemilano" target="_blank" rel="noopener" class="social-link-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="https://www.tripadvisor.it/Restaurant_Review-g187849-d1077819-Reviews-Skuisito_Steak_House_Wine_Bar-Milan_Lombardy.html" target="_blank" rel="noopener" class="social-link-btn" aria-label="TripAdvisor"><i class="fa-solid fa-utensils"></i></a>
+              <a href="https://www.skuisito.it/il-ristorante/" target="_blank" rel="noopener" class="social-link-btn" aria-label="Sito web"><i class="fa-solid fa-globe"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Styled Map Card: OpenStreetMap Milano Via Pacini 18 -->
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="map-card-wrapper">
+            <iframe
+              src="https://www.openstreetmap.org/export/embed.html?bbox=9.2138%2C45.4758%2C9.2338%2C45.4858&amp;layer=mapnik&amp;marker=45.4808%2C9.2238"
+              title="Mappa Skuisito SteakHouse Milano Via Pacini 18" loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 8: CTA Banner
+       ========================================================================= -->
+  <section class="section-cta-banner">
+    <div class="container">
+      <div class="cta-banner-content">
+        <h2 class="cta-banner-title sis-text-anime-style-3" data-i18n="ctaBanner.heading">Vivi il Vero Gusto della Nostra Cucina</h2>
+        <div class="cta-banner-actions">
+          <button class="btn-cta-dark open-reservation-btn" data-i18n="ctaBanner.btnBook">Prenota un Tavolo</button>
+          <a href="#menu" class="btn-steak-outline" data-i18n="ctaBanner.btnMenu">Esplora il Menù</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 9: Footer
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <a href="#" class="footer-logo">
+        <img src="images/logo.png" alt="Skuisito SteakHouse & WineBar" class="footer-logo-img">
+      </a>
+
+      <ul class="footer-nav">
+        <li><a href="#" data-i18n="footer.home">Home</a></li>
+        <li><a href="#about" data-i18n="footer.about">Su di Noi</a></li>
+        <li><a href="#menu" data-i18n="footer.menu">Menù</a></li>
+        <li><a href="#order-online" data-i18n="footer.takeaway">Asporto</a></li>
+        <li><a href="#contact" data-i18n="footer.contact">Contatti</a></li>
+        <li><a href="#events" data-i18n="footer.events">Eventi</a></li>
+        <li><a href="#" class="open-reservation-btn" data-i18n="footer.reservations">Prenotazioni</a></li>
+      </ul>
+
+      <p class="footer-copyright" style="margin-bottom: 0.5rem;" data-i18n-html="footer.legal">
+        <strong>Ragione Sociale:</strong> ZG srl — "SKUISITO STEAK HOUSE" • Via Pacini 18, 20131 Milano • <strong>P.IVA:</strong> 07526540963 - Milano
+      </p>
+      <p class="footer-copyright" data-i18n="footer.copyright">
+        Copyright © 2026 Skuisito SteakHouse & WineBar (ZG srl). Tutti i diritti riservati.
+      </p>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       INTERACTIVE MODALS & CART DRAWER
+       ========================================================================= -->
+  <!-- Reservation Modal -->
+  <div class="modal-backdrop-custom" id="reservationModal">
+    <div class="modal-dialog-custom">
+      <button class="modal-close-btn" id="reservationModalClose" aria-label="Chiudi Modale">&times;</button>
+      <span class="section-label" data-i18n="modalReservation.label">PRENOTAZIONE ONLINE</span>
+      <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;" data-i18n="modalReservation.heading">Riserva il Tuo Tavolo</h3>
+      <p class="text-muted" style="font-size: 0.88rem; margin-bottom: 1.5rem;" data-i18n="modalReservation.subtext">Unisciti a noi per un'esperienza indimenticabile di carni pregiate alla brace e wine bar.</p>
+
+      <form id="reservationForm">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label" style="font-size: 0.82rem; font-weight:600;" data-i18n="modalReservation.guestsLabel">Numero Ospiti</label>
+            <select class="form-select" id="resGuests" required>
+              <option value="2" data-i18n="modalReservation.opt2">2 Ospiti (Tavolo per 2)</option>
+              <option value="4" data-i18n="modalReservation.opt4">4 Ospiti (Tavolo da 4)</option>
+              <option value="6" data-i18n="modalReservation.opt6">6 Ospiti (Tavolata)</option>
+              <option value="8+" data-i18n="modalReservation.opt8">8+ Ospiti (Gruppi & Eventi)</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" style="font-size: 0.82rem; font-weight:600;" data-i18n="modalReservation.dateLabel">Data</label>
+            <input type="date" class="form-control" id="resDate" required value="2026-09-15">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" style="font-size: 0.82rem; font-weight:600;" data-i18n="modalReservation.timeLabel">Orario</label>
+            <select class="form-select" id="resTime" required>
+              <option value="12:30">12:30 (Pranzo)</option>
+              <option value="13:15">13:15 (Pranzo)</option>
+              <option value="19:30" selected>19:30 (Cena)</option>
+              <option value="20:30">20:30 (Cena)</option>
+              <option value="21:30">21:30 (Cena)</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" style="font-size: 0.82rem; font-weight:600;" data-i18n="modalReservation.phoneLabel">Telefono di Contatto</label>
+            <input type="tel" class="form-control" placeholder="+39 333 0000000" required>
+          </div>
+          <div class="col-12">
+            <label class="form-label" style="font-size: 0.82rem; font-weight:600;" data-i18n="modalReservation.nameLabel">Nome e Cognome</label>
+            <input type="text" class="form-control" placeholder="Mario Rossi" data-i18n-placeholder="modalReservation.namePlaceholder" required>
+          </div>
+          <div class="col-12">
+            <label class="form-label" style="font-size: 0.82rem; font-weight:600;" data-i18n="modalReservation.notesLabel">Note / Richieste Particolari / Allergie</label>
+            <textarea class="form-control" rows="2"
+              placeholder="Segnala eventuali allergie, intolleranze o ricorrenze speciali..." data-i18n-placeholder="modalReservation.notesPlaceholder"></textarea>
+          </div>
+          <div class="col-12 mt-4">
+            <button type="submit" class="btn-steak-red w-100 py-3" data-i18n="modalReservation.submitBtn">Conferma Prenotazione</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Cart Off-Canvas Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h5 class="mb-0" style="font-family: var(--font-serif); font-size: 1.3rem;" data-i18n="cart.title">Il Tuo Ordine da Asporto</h5>
+      <button class="btn-close" id="cartCloseBtn" aria-label="Chiudi Carrello"></button>
+    </div>
+    <div class="cart-drawer-body" id="cartItemsList">
+      <p class="text-muted text-center py-4" data-i18n-html="cart.empty">Il tuo carrello è attualmente vuoto.<br>Aggiungi le nostre specialità dal menù!
+      </p>
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="d-flex align-items-center justify-content-between mb-3">
+        <span class="fw-bold" data-i18n="cart.subtotal">Subtotale Stimato:</span>
+        <span class="fw-bold fs-5 text-danger" id="cartSubtotal">€ 0,00</span>
+      </div>
+      <button class="btn-steak-red w-100" id="cartCheckoutBtn" data-i18n="cart.checkoutBtn">Procedi all'Ordine</button>
+    </div>
+  </div>
+
+  <!-- Back To Top Button -->
+  <div class="sis-back-to-top-button">
+    <button class="sis-back-to-top" id="backToTop" aria-label="Torna su">
+      <i class="fa fa-chevron-up"></i>
+    </button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/gsap.min.js"></script>
+  <script src="js/ScrollTrigger.min.js"></script>
+  <script src="js/SplitText.js"></script>
+  <script src="js/magiccursor.js"></script>
+  <script src="js/cursor/cursor.js"></script>
+
+  <!-- Internationalization (i18n) Engine -->
+  <script src="js/i18n.js"></script>
+
+  <!-- Hero Canvas Controller -->
+  <script src="js/hero-canvas.js"></script>
+
+  <!-- Main Website Script -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
