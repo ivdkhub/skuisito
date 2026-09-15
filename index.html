@@ -1427,58 +1427,187 @@
   <!-- =========================================================================
        INTERACTIVE MODALS & CART DRAWER
        ========================================================================= -->
-  <!-- Reservation Modal -->
+  <!-- Reservation Modal (Mobile-First Luxury Experience) -->
   <div class="modal-backdrop-custom" id="reservationModal">
-    <div class="modal-dialog-custom">
+    <div class="modal-dialog-custom modal-dialog-reservation">
       <button class="modal-close-btn" id="reservationModalClose" aria-label="Chiudi Modale">&times;</button>
-      <span class="section-label" data-i18n="modalReservation.label">PRENOTAZIONE ONLINE</span>
-      <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;" data-i18n="modalReservation.heading">Riserva il Tuo Tavolo</h3>
-      <p class="text-muted" style="font-size: 0.88rem; margin-bottom: 1.5rem;" data-i18n="modalReservation.subtext">Unisciti a noi per un'esperienza indimenticabile di carni pregiate alla brace e wine bar.</p>
+      
+      <!-- Reservation Form View -->
+      <div id="reservationFormView">
+        <div class="reservation-modal-header text-center mb-3">
+          <span class="section-label" data-i18n="modalReservation.label">PRENOTAZIONE ONLINE</span>
+          <h3 class="modal-res-title" data-i18n="modalReservation.heading">Riserva il Tuo Tavolo</h3>
+          <p class="text-muted modal-res-subtitle" data-i18n="modalReservation.subtext">Esperienza culinaria di carni pregiate alla brace e wine bar a Milano.</p>
+        </div>
 
-      <form id="reservationForm">
-        <div class="row g-3">
-          <div class="col-md-6">
-            <label class="form-label" style="font-size: 0.82rem; font-weight:600;" data-i18n="modalReservation.guestsLabel">Numero Ospiti</label>
-            <select class="form-select" id="resGuests" required>
-              <option value="2" data-i18n="modalReservation.opt2">2 Ospiti (Tavolo per 2)</option>
-              <option value="4" data-i18n="modalReservation.opt4">4 Ospiti (Tavolo da 4)</option>
-              <option value="6" data-i18n="modalReservation.opt6">6 Ospiti (Tavolata)</option>
-              <option value="8+" data-i18n="modalReservation.opt8">8+ Ospiti (Gruppi & Eventi)</option>
-            </select>
+        <form id="reservationForm" novalidate>
+          <!-- 1. Service Selector (Pranzo / Cena) -->
+          <div class="mb-3">
+            <label class="form-label modal-res-label" data-i18n="modalReservation.serviceLabel">Servizio</label>
+            <div class="service-toggle-group">
+              <button type="button" class="service-pill-btn" data-service="lunch">
+                <i class="fa-solid fa-sun text-warning"></i>
+                <span data-i18n="modalReservation.lunch">Pranzo</span>
+                <small class="service-time-hint">12:00 - 14:30</small>
+              </button>
+              <button type="button" class="service-pill-btn active" data-service="dinner">
+                <i class="fa-solid fa-moon text-danger"></i>
+                <span data-i18n="modalReservation.dinner">Cena</span>
+                <small class="service-time-hint">18:30 - 23:30</small>
+              </button>
+            </div>
+            <input type="hidden" id="resService" value="dinner">
           </div>
-          <div class="col-md-6">
-            <label class="form-label" style="font-size: 0.82rem; font-weight:600;" data-i18n="modalReservation.dateLabel">Data</label>
-            <input type="date" class="form-control" id="resDate" required value="2026-09-15">
+
+          <!-- 2. Guests Selector (Quick Pills) -->
+          <div class="mb-3">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <label class="form-label modal-res-label mb-0" data-i18n="modalReservation.guestsLabel">Numero Ospiti</label>
+              <span class="selected-guest-badge" id="selectedGuestCount">2 persone</span>
+            </div>
+            <div class="guest-pills-scroll">
+              <div class="guest-pills-group" id="guestPillsGroup">
+                <button type="button" class="guest-pill-btn" data-guests="1">1</button>
+                <button type="button" class="guest-pill-btn active" data-guests="2">2</button>
+                <button type="button" class="guest-pill-btn" data-guests="3">3</button>
+                <button type="button" class="guest-pill-btn" data-guests="4">4</button>
+                <button type="button" class="guest-pill-btn" data-guests="5">5</button>
+                <button type="button" class="guest-pill-btn" data-guests="6">6</button>
+                <button type="button" class="guest-pill-btn" data-guests="7">7</button>
+                <button type="button" class="guest-pill-btn" data-guests="8">8</button>
+                <button type="button" class="guest-pill-btn" data-guests="8+">8+</button>
+              </div>
+            </div>
+            <input type="hidden" id="resGuests" value="2">
           </div>
-          <div class="col-md-6">
-            <label class="form-label" style="font-size: 0.82rem; font-weight:600;" data-i18n="modalReservation.timeLabel">Orario</label>
-            <select class="form-select" id="resTime" required>
-              <option value="12:30">12:30 (Pranzo)</option>
-              <option value="13:15">13:15 (Pranzo)</option>
-              <option value="19:30" selected>19:30 (Cena)</option>
-              <option value="20:30">20:30 (Cena)</option>
-              <option value="21:30">21:30 (Cena)</option>
-            </select>
+
+          <!-- 3. Date Selection & Quick Date Shortcuts -->
+          <div class="row g-2 mb-3">
+            <div class="col-12">
+              <label class="form-label modal-res-label" data-i18n="modalReservation.dateLabel">Data Desiderata</label>
+              <div class="quick-date-chips mb-2">
+                <button type="button" class="quick-date-btn active" data-date-offset="0" data-i18n="modalReservation.today">Oggi</button>
+                <button type="button" class="quick-date-btn" data-date-offset="1" data-i18n="modalReservation.tomorrow">Domani</button>
+                <button type="button" class="quick-date-btn" data-date-offset="weekend" data-i18n="modalReservation.weekend">Weekend</button>
+              </div>
+              <input type="date" class="form-control res-date-input" id="resDate" required>
+              <div class="closed-notice text-danger mt-1 d-none" id="resClosedWarning">
+                <i class="fa-solid fa-circle-exclamation me-1"></i> <span data-i18n="modalReservation.closedNotice">Il ristorante è chiuso la domenica. Ti invitiamo a selezionare un'altra data.</span>
+              </div>
+            </div>
           </div>
-          <div class="col-md-6">
-            <label class="form-label" style="font-size: 0.82rem; font-weight:600;" data-i18n="modalReservation.phoneLabel">Telefono di Contatto</label>
-            <input type="tel" class="form-control" placeholder="+39 333 0000000" required>
+
+          <!-- 4. Interactive Time Slots -->
+          <div class="mb-3">
+            <label class="form-label modal-res-label" data-i18n="modalReservation.timeLabel">Orario</label>
+            <div class="time-slots-grid" id="timeSlotsContainer">
+              <!-- Dynamically populated via JS based on lunch/dinner -->
+            </div>
+            <input type="hidden" id="resTime" value="19:30" required>
           </div>
-          <div class="col-12">
-            <label class="form-label" style="font-size: 0.82rem; font-weight:600;" data-i18n="modalReservation.nameLabel">Nome e Cognome</label>
-            <input type="text" class="form-control" placeholder="Mario Rossi" data-i18n-placeholder="modalReservation.namePlaceholder" required>
+
+          <!-- 5. Occasion & Special Preferences (Quick Chips) -->
+          <div class="mb-3">
+            <label class="form-label modal-res-label" data-i18n="modalReservation.occasionLabel">Occasione / Preferenza (opzionale)</label>
+            <div class="occasion-chips-group" id="occasionChipsGroup">
+              <button type="button" class="occasion-chip-btn" data-occasion="Cena Romantica">🕯️ <span data-i18n="modalReservation.occRomantic">Romantica</span></button>
+              <button type="button" class="occasion-chip-btn" data-occasion="Compleanno">🎂 <span data-i18n="modalReservation.occBirthday">Compleanno</span></button>
+              <button type="button" class="occasion-chip-btn" data-occasion="Festa di Laurea">🎓 <span data-i18n="modalReservation.occGraduation">Laurea</span></button>
+              <button type="button" class="occasion-chip-btn" data-occasion="Lavoro / Business">💼 <span data-i18n="modalReservation.occBusiness">Lavoro</span></button>
+              <button type="button" class="occasion-chip-btn" data-occasion="Degustazione Carne & Vino">🍷 <span data-i18n="modalReservation.occTasting">Degustazione</span></button>
+            </div>
+            <input type="hidden" id="resOccasion" value="">
           </div>
-          <div class="col-12">
-            <label class="form-label" style="font-size: 0.82rem; font-weight:600;" data-i18n="modalReservation.notesLabel">Note / Richieste Particolari / Allergie</label>
-            <textarea class="form-control" rows="2"
-              placeholder="Segnala eventuali allergie, intolleranze o ricorrenze speciali..." data-i18n-placeholder="modalReservation.notesPlaceholder"></textarea>
+
+          <!-- 6. Contact Details -->
+          <div class="row g-2 mb-3">
+            <div class="col-sm-6">
+              <label class="form-label modal-res-label" data-i18n="modalReservation.nameLabel">Nome e Cognome</label>
+              <input type="text" class="form-control res-text-input" id="resName" placeholder="Mario Rossi" data-i18n-placeholder="modalReservation.namePlaceholder" required>
+            </div>
+            <div class="col-sm-6">
+              <label class="form-label modal-res-label" data-i18n="modalReservation.phoneLabel">Telefono / WhatsApp</label>
+              <input type="tel" class="form-control res-text-input" id="resPhone" placeholder="+39 333 0000000" required>
+            </div>
           </div>
-          <div class="col-12 mt-4">
-            <button type="submit" class="btn-steak-red w-100 py-3" data-i18n="modalReservation.submitBtn">Conferma Prenotazione</button>
+
+          <!-- 7. Notes & Allergies -->
+          <div class="mb-3">
+            <label class="form-label modal-res-label" data-i18n="modalReservation.notesLabel">Note / Intolleranze / Allergie</label>
+            <textarea class="form-control res-textarea" id="resNotes" rows="2" placeholder="Segnala eventuali allergie, intolleranze o richieste di tavolo..." data-i18n-placeholder="modalReservation.notesPlaceholder"></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="mt-4">
+            <button type="submit" class="btn-steak-red w-100 py-3 modal-submit-btn" id="btnSubmitReservation">
+              <i class="fa-solid fa-calendar-check me-2"></i>
+              <span data-i18n="modalReservation.submitBtn">Conferma Prenotazione</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Reservation Success Confirmation View (Animated on Submit) -->
+      <div id="reservationSuccessView" class="reservation-success-box text-center d-none">
+        <div class="success-icon-wrap mb-3">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <span class="section-label" data-i18n="modalReservation.confirmedLabel">PRENOTAZIONE RICEVUTA</span>
+        <h3 class="modal-res-title mb-2" data-i18n="modalReservation.confirmedTitle">Ti Aspettiamo da Skuisito!</h3>
+        <p class="text-muted" style="font-size: 0.92rem; line-height: 1.6;" data-i18n="modalReservation.confirmedDesc">
+          Il tuo tavolo è stato registrato. Abbiamo inviato un promemoria ai nostri addetti di sala.
+        </p>
+
+        <!-- Summary Card -->
+        <div class="reservation-summary-card my-3 p-3 text-start">
+          <div class="summary-row d-flex justify-content-between mb-2 pb-2 border-bottom">
+            <span class="text-muted" data-i18n="modalReservation.summaryGuests"><i class="fa-solid fa-users me-2 text-danger"></i>Ospiti:</span>
+            <strong id="summaryGuests">2 persone</strong>
+          </div>
+          <div class="summary-row d-flex justify-content-between mb-2 pb-2 border-bottom">
+            <span class="text-muted" data-i18n="modalReservation.summaryDate"><i class="fa-solid fa-calendar-day me-2 text-danger"></i>Data & Ora:</span>
+            <strong id="summaryDateTime">15 Settembre ore 20:00</strong>
+          </div>
+          <div class="summary-row d-flex justify-content-between mb-2 pb-2 border-bottom">
+            <span class="text-muted" data-i18n="modalReservation.summaryName"><i class="fa-solid fa-user me-2 text-danger"></i>Prenotato a nome:</span>
+            <strong id="summaryName">Mario Rossi</strong>
+          </div>
+          <div class="summary-row d-flex justify-content-between" id="summaryOccasionRow">
+            <span class="text-muted" data-i18n="modalReservation.summaryOccasion"><i class="fa-solid fa-champagne-glasses me-2 text-danger"></i>Occasione:</span>
+            <strong id="summaryOccasion">Cena Romantica</strong>
           </div>
         </div>
-      </form>
+
+        <!-- Action Buttons -->
+        <div class="d-flex flex-column gap-2 mt-3">
+          <a href="#" id="btnWhatsAppConfirm" target="_blank" class="btn btn-success py-2 fw-semibold d-flex align-items-center justify-content-center gap-2">
+            <i class="fa-brands fa-whatsapp fs-5"></i>
+            <span data-i18n="modalReservation.whatsappConfirmBtn">Conferma Rapida su WhatsApp</span>
+          </a>
+          <button type="button" id="btnAddToCalendar" class="btn btn-outline-dark py-2 fw-semibold d-flex align-items-center justify-content-center gap-2">
+            <i class="fa-regular fa-calendar-plus"></i>
+            <span data-i18n="modalReservation.addCalendarBtn">Aggiungi al Calendario (iCal/Google)</span>
+          </button>
+          <button type="button" class="btn btn-link text-muted btn-sm mt-1" id="btnCloseSuccessModal" data-i18n="modalReservation.closeBtn">Chiudi</button>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- Mobile Sticky Bottom Booking & Quick Contact Bar -->
+  <div class="mobile-sticky-booking-bar" id="mobileStickyBar">
+    <a href="tel:+390270638397" class="sticky-bar-action sticky-call" aria-label="Chiama Skuisito SteakHouse">
+      <i class="fa-solid fa-phone"></i>
+      <span data-i18n="stickyBar.call">Chiama</span>
+    </a>
+    <a href="https://wa.me/390270638397?text=Ciao%20Skuisito!%20Vorrei%20informazioni%20o%20prenotare%20un%20tavolo." target="_blank" class="sticky-bar-action sticky-wa" aria-label="WhatsApp Skuisito">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+    <button type="button" class="sticky-bar-btn open-reservation-btn">
+      <i class="fa-solid fa-calendar-check me-1"></i>
+      <span data-i18n="stickyBar.book">Prenota Tavolo</span>
+    </button>
   </div>
 
   <!-- Cart Off-Canvas Drawer -->
